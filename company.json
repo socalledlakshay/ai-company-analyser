@@ -1,0 +1,20 @@
+{
+    "name": "Indian Premier League",
+    "industry": "Sports & Entertainment",
+    "business_model": "Franchise-based sports league generating revenue through broadcasting rights, central and team sponsorships, ticket sales, and merchandise licensing.",
+    "products": [
+        "Live T20 Cricket Matches",
+        "Broadcasting & Streaming Rights",
+        "Sponsorship & Advertising Packages",
+        "Licensed Merchandising",
+        "Digital Media Content"
+    ],
+    "competitors": [
+        "Big Bash League",
+        "Pakistan Super League",
+        "Caribbean Premier League",
+        "SA20",
+        "Major League Cricket",
+        "The Hundred"
+    ]
+}

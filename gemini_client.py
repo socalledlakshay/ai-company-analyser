@@ -13,7 +13,9 @@ def ask_gemini(user_prompt):
         model="gemini-3.6-flash",
         contents=user_prompt,
         config=types.GenerateContentConfig(
-            system_instruction=COMPANY_ANALYST_PROMPT
+            system_instruction=COMPANY_ANALYST_PROMPT,
+            response_mime_type="application/json"
         )
     )
+    
     return response.text
