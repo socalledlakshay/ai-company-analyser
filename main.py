@@ -1,16 +1,15 @@
-from gemini_client import ask_gemini
 from json_writer import save_json
-import json
 from models import Company
+from gemini_client import extract_company_profile
+from extraction import create_company_profile
 
-company = input(
-    "Enter company name: "
+company_text = input(
+    "Enter company text: "
 )
 
 try:
-    response = ask_gemini(company)
-    data = json.loads(response)
-    company = Company(**data)
+    response = extract_company_profile(company_text)
+    company = create_company_profile(response)
     save_json(company.model_dump(), "company.json")
     print("Report saved successfully")
 

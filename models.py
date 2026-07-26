@@ -1,8 +1,8 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 class Company(BaseModel):
     name: str
-    industry: str
-    business_model: str
-    products: list[str]
-    competitors: list[str]
+    industry: str | None = None
+    business_model: str | None = None
+    products: list[str] = Field(default_factory=list)
+    competitors: list[str] = Field(default_factory=list)

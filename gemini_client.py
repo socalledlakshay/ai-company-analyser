@@ -8,10 +8,10 @@ client = genai.Client(
     api_key=API_key
 )
 
-def ask_gemini(user_prompt):
+def extract_company_profile(text):
     response = client.models.generate_content(
         model="gemini-3.6-flash",
-        contents=user_prompt,
+        contents=text,
         config=types.GenerateContentConfig(
             system_instruction=COMPANY_ANALYST_PROMPT,
             response_mime_type="application/json"
